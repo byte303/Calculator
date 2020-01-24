@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="text_error">
+        "Введено максимальное количество символов! (30)"
+    </string>
+</resources>
