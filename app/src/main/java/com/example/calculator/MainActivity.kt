@@ -60,15 +60,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun checkResult(){
-        var result: Float
         for(i in 0 until txtResult.length()) {
-            if (i != txtResult.length() - 1) {
+            if (i != txtResult.length() - 1 && i != 0) {
+
                 when (txtResult.text[i]) {
                     '+' -> {
                         val num1 = txtResult.text.substring(0, i).toFloat()
                         val num2 = txtResult.text.substring(i+1,txtResult.length()).toFloat()
 
-                        result = num1 + num2
+                        val result = num1 + num2
                         txtResult.text = result.toString()
                         return
                     }
@@ -76,9 +76,7 @@ class MainActivity : AppCompatActivity() {
                         val num1 = txtResult.text.substring(0, i).toFloat()
                         val num2 = txtResult.text.substring(i+1,txtResult.length()).toFloat()
 
-                        Toast.makeText(applicationContext,"$num1 and $num2",Toast.LENGTH_SHORT).show()
-
-                        result = num1 - num2
+                        val result = num1 - num2
                         txtResult.text = result.toString()
                         return
                     }
@@ -86,7 +84,7 @@ class MainActivity : AppCompatActivity() {
                         val num1 = txtResult.text.substring(0, i).toFloat()
                         val num2 = txtResult.text.substring(i+1,txtResult.length()).toFloat()
 
-                        result = num1 * num2
+                        val result = num1 * num2
                         txtResult.text = result.toString()
                         return
                     }
@@ -94,7 +92,7 @@ class MainActivity : AppCompatActivity() {
                         val num1 = txtResult.text.substring(0, i).toFloat()
                         val num2 = txtResult.text.substring(i+1,txtResult.length()).toFloat()
 
-                        result = num1 / num2
+                        val result = num1 / num2
                         txtResult.text = result.toString()
                         return
                     }
